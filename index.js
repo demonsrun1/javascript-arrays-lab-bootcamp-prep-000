@@ -1,5 +1,5 @@
 // Add your functions and code here
-var kittens = ["cat1","cat2","cat3"];
+var kittens = ["Milo","Otis","Garfield"];
 function destructivelyAppendKitten(name){
   kittens.push(name);
   return kittens;
@@ -21,6 +21,7 @@ function destructivelyRemoveFirstKitten(){
 }
 
 function appendKitten(name){
-  kittens.splice(0,name);
-  return kittens;
+  var newKittens = [...kittens]
+  newKittens.push(name);
+  return newKittens;
 }
